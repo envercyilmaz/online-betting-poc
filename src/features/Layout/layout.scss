@@ -1,0 +1,119 @@
+$primary-color: #7d9fa4;
+$brand-color: #fc0;
+
+.wrapper{
+  display: flex;
+  width: 1070px;
+}
+
+.layout{
+  flex: 0 1 800px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.header{
+  background-color: $brand-color;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+}
+
+.group-header-row {
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 10px;
+
+  .header-text {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+    flex:0 0 352px;
+  }
+}
+
+.betting-row {
+  background-color: #f4f9f9;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  border-bottom: 1px solid $primary-color;
+
+  &:hover {
+    background-color: #ebf6e8;
+  }
+}
+
+.cell {
+  color: $primary-color;
+  border-right: 1px solid $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.cell[type="header"] {
+  flex: 0 0 35px;
+  color: #fff;
+}
+
+.cell[type="id"] {
+  width: 50px;
+  font-weight: 600;
+}
+
+.cell[type="mbs"] {
+  flex: 0 0 35px;
+  font-weight: 600;
+  color: purple;
+}
+
+.cell[type="date"] {
+  width: 90px;
+}
+
+.cell[type="time"] {
+  width: 50px;
+}
+
+.cell[type="name"] {
+  width: 200px;
+  font-weight: 600;
+  padding: 0 10px;
+  justify-content: flex-start;
+}
+
+.btn-cell {
+  flex: 0 0 35px;
+  color: $primary-color;
+  font-size: 13px;
+  font-weight: bold;
+  border-right: 1px solid $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &.selected {
+    background-color: $brand-color;
+  }
+}
+
+.btn-cell-last{
+  flex: 0 0 35px;
+  color: $primary-color;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
