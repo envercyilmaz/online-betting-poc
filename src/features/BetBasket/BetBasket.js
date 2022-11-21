@@ -43,7 +43,7 @@ const BetBasket = ({ selectedBets, isMediumScreen, isMobileScreen }) => {
           <div className='no-bets-warning'>Kuponunuzda maç bulunmamaktadır</div>
         )}
       </div>
-      {isMediumScreen && selectedBets.totalOdds > 1 ? <div className="footer">{`Oran: ${selectedBets.totalOdds}`}</div> : null}
+      {selectedBets.totalOdds > 1 ? <div className="footer">{`Oran: ${selectedBets.totalOdds}`}</div> : null}
       {isMediumScreen && <div className='basket-medium-screen-close' onClick={() => setIsBasketVisible(false)}>X</div>}
     </div>
   );

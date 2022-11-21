@@ -14,8 +14,8 @@ const bettingIndexMap = {
 };
 
 const Layout = () => {
-  const isMediumScreen = useMediaQuery({ maxDeviceWidth: 1200 }, { minDeviceWidth: 801 });
-  const isMobileScreen = useMediaQuery({ maxDeviceWidth: 800 });
+  const isMediumScreen = useMediaQuery({ query: '(max-width: 1200px) and (min-width: 801px)' });
+  const isMobileScreen = useMediaQuery({ query: '(max-width: 800px)' });
 
   const { Events: events } = useContext(BultenContext);
   const eventKeyList = Object.keys(events);
