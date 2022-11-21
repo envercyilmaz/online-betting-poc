@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './betBasket.scss';
 import PropTypes from 'prop-types';
 
-const BetBasket = ({ selectedBets }) => (
-    <div className='outer-basket'>
+const BetBasket = ({ selectedBets, isMediumScreen, isMobileScreen }) => {
+  const [isBasketVisible, setIsBasketVisible] = useState(!isMediumScreen);
+  let wrapperClass = 'outer-basket';
+
+  if (isMobileScreen) {
+    wrapperClass = 'outer-basket-mobile-screen';
+  } else if (isMediumScreen) {
+    wrapperClass = 'outer-basket-medium-screen';
+  }
+
+  if (!isBasketVisible && isMediumScreen) {
+    return (
+      <div className='medium-screen-menu' onClick={() => setIsBasketVisible(true)}>
+        <div className='bet-count'>{selectedBets?.list.length || '-'}</div>
+        <div className='medium-screen-odd-label'>{`Oran: ${selectedBets.totalOdds}`}</div>
+      </div>);
+  }
+  return (
+    <div className={wrapperClass}>
       <div className='header-row'>
         <div className='header-text'>İDDAA KUPONUM</div>
         <div className='bet-count'>{selectedBets?.list.length || '-'}</div>
@@ -26,12 +43,16 @@ const BetBasket = ({ selectedBets }) => (
           <div className='no-bets-warning'>Kuponunuzda maç bulunmamaktadır</div>
         )}
       </div>
-      {selectedBets.totalOdds > 1 ? <div className="footer">{`Oran: ${selectedBets.totalOdds}`}</div> : null}
+      {isMediumScreen && selectedBets.totalOdds > 1 ? <div className="footer">{`Oran: ${selectedBets.totalOdds}`}</div> : null}
+      {isMediumScreen && <div className='basket-medium-screen-close' onClick={() => setIsBasketVisible(false)}>X</div>}
     </div>
-);
+  );
+};
 
 BetBasket.propTypes = {
   selectedBets: PropTypes.object,
+  isMediumScreen: PropTypes.bool,
+  isMobileScreen: PropTypes.bool,
 };
 
 export default BetBasket;
