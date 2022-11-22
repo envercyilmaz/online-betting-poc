@@ -71,7 +71,7 @@ $brand-color: #fc0;
 }
 
 .cell[type="mbs"] {
-  flex: 0 0 40px;
+  flex: 0 0 35px;
   font-weight: 600;
   color: purple;
 }
@@ -147,7 +147,7 @@ $brand-color: #fc0;
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .betting-section-mobile {
@@ -191,7 +191,9 @@ $brand-color: #fc0;
   height: 60px;
   position: absolute;
   bottom: 0;
-  background-color: #f4f9f9;
+  left: 0;
+  color: #fff;
+  background-color: #204e57;
   border: 2px solid $primary-color;
   width: 100%;
   display: flex;
