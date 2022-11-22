@@ -1,5 +1,4 @@
-$primary-color: #7d9fa4;
-$brand-color: #fc0;
+@import '../../variables';
 
 .wrapper{
   display: flex;
@@ -33,21 +32,21 @@ $brand-color: #fc0;
     display: flex;
     align-items: center;
     font-size: 12px;
-    color: #fff;
+    color: $secondary-color;
     flex:0 0 352px;
   }
 }
 
 .betting-row {
-  background-color: #f4f9f9;
-  color: #000;
+  background-color: $background-color;
+  color: $tertiary-color;
   display: flex;
   align-items: center;
   height: 34px;
   border-bottom: 1px solid $primary-color;
 
   &:hover {
-    background-color: #ebf6e8;
+    background-color: $hover-color;
   }
 }
 
@@ -62,7 +61,7 @@ $brand-color: #fc0;
 
 .cell[type="header"] {
   flex: 0 0 35px;
-  color: #fff;
+  color: $secondary-color;
 }
 
 .cell[type="id"] {
@@ -73,7 +72,7 @@ $brand-color: #fc0;
 .cell[type="mbs"] {
   flex: 0 0 35px;
   font-weight: 600;
-  color: purple;
+  color: $highlight-color;
 }
 
 .cell[type="date"] {
@@ -110,7 +109,7 @@ $brand-color: #fc0;
 @media only screen and (max-width: 800px) {
   .btn-cell {
     flex: 0 0 40px;
-    color: #fff;
+    color: $secondary-color;
     background-color: $primary-color;
     margin-right: 5px;
     font-size: 13px;
@@ -151,7 +150,7 @@ $brand-color: #fc0;
 }
 
 .betting-section-mobile {
-  background-color: #f4f9f9;
+  background-color: $background-color;
   display: flex;
   flex-direction: column;
   height: 82px;
@@ -160,7 +159,7 @@ $brand-color: #fc0;
 }
 
 .betting-row-mobile {
-  color: #000;
+  color: $tertiary-color;
   display: flex;
   align-items: center;
   height: 40px;
@@ -171,7 +170,7 @@ $brand-color: #fc0;
 }
 
 .betting-header-row-mobile {
-  background-color: #f4f9f9;
+  background-color: $background-color;
   color: $primary-color;
   display: flex;
   align-items: center;
@@ -179,10 +178,11 @@ $brand-color: #fc0;
   font-size: 11px;
 
   div {
-    flex: 0 0 40px;
+    flex: 0 0 35px;
     &.mobile-header {
       margin-right: 5px;
       text-align: center;
+      flex: 0 0 40px;
     }
   }
 }
@@ -192,8 +192,8 @@ $brand-color: #fc0;
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #fff;
-  background-color: #204e57;
+  color: $secondary-color;
+  background-color: $dark-background-color;
   border: 2px solid $primary-color;
   width: 100%;
   display: flex;
