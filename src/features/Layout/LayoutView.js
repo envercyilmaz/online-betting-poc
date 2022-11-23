@@ -14,7 +14,7 @@ const LayoutView = ({
 }) => (
     <div className='wrapper'>
       <div className='layout'>
-        <div className='header'>{`Event Count: ${eventCount}`}</div>
+        <div className='header' role='heading'>{`Event Count: ${eventCount}`}</div>
         {competitionList?.length ? competitionList.map((comp) => {
           const list = eventsByCompetition[comp]?.list;
           return (

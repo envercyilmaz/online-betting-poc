@@ -12,8 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "path": "^0.12.7",
+    "@testing-library/jest-dom": "^5.16.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -45,6 +44,7 @@
   "jest": {
     "verbose": true,
     "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "babel-jest"
     }
